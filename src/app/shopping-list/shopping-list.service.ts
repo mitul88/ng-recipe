@@ -14,6 +14,10 @@ export class ShoppingListService {
         new Ingredient('Banana', 12),
       ];
 
+      getIngredient(index: number) {
+          return this.ingredients[index];
+      }
+
       getIngredients() {
           return this.ingredients.slice();
       }
