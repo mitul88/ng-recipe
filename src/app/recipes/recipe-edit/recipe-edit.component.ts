@@ -59,7 +59,7 @@ recipeForm: FormGroup;
     })
   }
 
-  get control() {
+  get controls() {
     return (<FormArray>this.recipeForm.get('ingredients')).controls;
   }
 
