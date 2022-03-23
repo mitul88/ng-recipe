@@ -66,4 +66,13 @@ recipeForm: FormGroup;
   onSubmit() {
     console.log(this.recipeForm);
   }
+
+  onAddIngredient() {
+    (<FormArray>this.recipeForm.get('ingredients')).push(
+      new FormGroup({
+        'name': new FormControl(),
+        'amount': new FormControl()
+      })
+    )
+  }
 }
