@@ -40,4 +40,12 @@ export class RecipeService {
         addIngredientsToShoppinList(ingredients: Ingredient[]) {
             this.slService.addIngredients(ingredients);
         }
+
+        addRecipe(recipe: Recipe) {
+            this.recipes.push(recipe);
+        }
+
+        updateRecipe(index: number, newRecipe: Recipe) {
+            this.recipes[index] = newRecipe;
+        }
 }
