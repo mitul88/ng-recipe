@@ -38,4 +38,8 @@ import { RecipeService } from '../recipe.service';
     this.router.navigate(['edit'], { relativeTo: this.route })
   }
 
+  onDeleteRecipe() {
+    this.recipeService.deleteRecipe(this.id)
+  }
+
 }
