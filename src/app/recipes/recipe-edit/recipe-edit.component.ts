@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Recipe } from '../recipe.model';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { RecipeService } from '../recipe.service';
 
 @Component({
@@ -15,6 +14,7 @@ editMode = false;
 recipeForm: FormGroup;
 
   constructor( private route: ActivatedRoute,
+               private router: Router,
                 private recipeService: RecipeService 
               ) { }
 
@@ -71,6 +71,7 @@ recipeForm: FormGroup;
     } else {
       this.recipeService.addRecipe(this.recipeForm.value);
     }
+    this.onCancel();
   }
 
   onAddIngredient() {
@@ -81,4 +82,9 @@ recipeForm: FormGroup;
       })
     )
   }
+
+  onCancel() {
+    this.router.navigate(['../'], {relativeTo: this.route});
+  }
+
 }
