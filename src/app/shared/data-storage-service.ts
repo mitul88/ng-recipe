@@ -10,5 +10,8 @@ export class DataStorageService {
 
     storeRecipes() {
         const recipes = this.recipeService.getRecipes();
+        this.http.put('https://ng-recipebook-6dd2c-default-rtdb.asia-southeast1.firebasedatabase.app/recipes.json', recipes).subscribe(response => {
+            console.log(response);
+        })
     }
 }
