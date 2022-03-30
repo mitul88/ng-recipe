@@ -8,28 +8,30 @@ import { Recipe } from "./recipe.model";
 export class RecipeService {
     recipesChanged = new Subject<Recipe[]>();
 
-    private recipes: Recipe[] = [
-        new Recipe(
-                'Samusa', 
-                'A great evening snack', 
-                'https://qph.fs.quoracdn.net/main-qimg-2bc9fd4b14f544e9b7d1a553eb809243', 
-                [
-                    new Ingredient('flour', 1),
-                    new Ingredient('meat', 1),
-                ]
-            ),
-        new Recipe(
-                'Singara', 
-                'Great alternative for Samusa', 
-                'https://www.indianhealthyrecipes.com/wp-content/uploads/2019/11/samosa-recipe-480x270.jpg', 
-                [
-                    new Ingredient('flour', 1),
-                    new Ingredient('potato', 1),
-                    new Ingredient('beans', 1),
-                ]
-            ),
-      ]
+    // private recipes: Recipe[] = [
+    //     new Recipe(
+    //             'Samusa', 
+    //             'A great evening snack', 
+    //             'https://qph.fs.quoracdn.net/main-qimg-2bc9fd4b14f544e9b7d1a553eb809243', 
+    //             [
+    //                 new Ingredient('flour', 1),
+    //                 new Ingredient('meat', 1),
+    //             ]
+    //         ),
+    //     new Recipe(
+    //             'Singara', 
+    //             'Great alternative for Samusa', 
+    //             'https://www.indianhealthyrecipes.com/wp-content/uploads/2019/11/samosa-recipe-480x270.jpg', 
+    //             [
+    //                 new Ingredient('flour', 1),
+    //                 new Ingredient('potato', 1),
+    //                 new Ingredient('beans', 1),
+    //             ]
+    //         ),
+    //   ]
 
+    private recipes: Recipe[] = [];
+    
     constructor(private slService: ShoppingListService) {}
 
         setRecipes(recipes: Recipe[]) {
