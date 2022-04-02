@@ -10,6 +10,10 @@ export class AuthComponent {
 
   constructor() { }
 
+  onSubmit(form) {
+
+  }
+
   onSwitchMode() {
     this.isLoginMode = !this.isLoginMode
   }
