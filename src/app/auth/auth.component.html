@@ -11,7 +11,9 @@
             </div>
             <div>
                 <button class="btn btn-primary" type="submit">{{ isLoginMode ? 'Login' : 'Sign Up' }}</button>
-                <button class="btn btn-link" (click)="onSwitchMode()" type="button">Have an Account ?</button>
+                <button class="btn btn-link" (click)="onSwitchMode()" type="button">
+                    {{ isLoginMode ? 'Sign up for new accoount' : 'Alrady have and account?'}}
+                </button>
             </div>
         </form>
     </div>
