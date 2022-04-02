@@ -20,7 +20,14 @@ export class AuthComponent {
     const email= form.value.email;
     const password= form.value.password;
 
-    this.authService.signUp(email, password);
+    this.authService.signUp(email, password).subscribe(
+      resData=> {
+        console.log(resData);
+      },
+      error=> {
+        console.log(error);
+      }
+    );
     form.reset();
 
   }
