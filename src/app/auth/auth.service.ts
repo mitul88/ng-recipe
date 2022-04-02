@@ -8,8 +8,14 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  signUp() {
-    
+  signUp(email: string, password: string) {
+    this.http.post('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCMaZUEFPt5XW5KokGV9XMDNAPMnO54-eI', 
+      {
+        email: email,
+        password: password,
+        returnSecureToken: true
+      }
+    );
   }
 
 }
