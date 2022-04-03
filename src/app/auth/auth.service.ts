@@ -37,7 +37,8 @@ export class AuthService {
         password: password,
         returnSecureToken: true
       }   
-    );    
+    )
+    .pipe(catchError(this.handleError));;    
   }
 
   private handleError(errResponse: HttpErrorResponse) {
@@ -50,6 +51,18 @@ export class AuthService {
       switch (errResponse.error.error.message) {
         case 'EMAIL_EXISTS':
           errorMessage = "This email already exists"
+          break;
+
+        case 'EMAIL_NOT_FOUND':
+          errorMessage = "Email not found"
+          break;
+
+        case 'INVALID_PASSWORD':
+          errorMessage = "Invalid password" 
+          break;
+          
+        default: 
+          errorMessage = "An unknown error occured !"
       }
       
       return throwError(()=> new Error(errorMessage));
