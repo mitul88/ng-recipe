@@ -1,8 +1,8 @@
-# This project is about creating new recipies, add ingredients to it. Finally user can save recipes to firebase realtime bd.
-
 # Recipe
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+This project is about creating new recipies, add ingredients to it. Finally user can save recipes to firebase realtime DB.
+
 
 ## Development server
 
@@ -14,3 +14,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Dependency used
 Bootstrap v3
+
+## Forms
+Both Template driven and reactive form used
