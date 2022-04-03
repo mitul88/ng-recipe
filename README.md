@@ -1,5 +1,4 @@
-# This project is about creating new recipies, add ingredients to it. User can also add the ingredients to the shopping list.
-## The project uses the Bootstrap 3 liabrary
+# This project is about creating new recipies, add ingredients to it. Finally user can save recipes to firebase realtime bd.
 
 # Recipe
 
@@ -13,4 +12,5 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-
+## Dependency used
+Bootstrap v3
