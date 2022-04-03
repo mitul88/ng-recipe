@@ -35,8 +35,6 @@ export class AuthComponent {
       authObs = this.authService.signUp(email, password);
     }
 
-    form.reset();
-
     authObs.subscribe(
       resData=> {
         console.log(resData);
@@ -47,7 +45,9 @@ export class AuthComponent {
         this.error = errorMessage;
         this.isLoading = false;
       }
-    );
+    )
+
+    form.reset();
   }
 
   onSwitchMode() {
