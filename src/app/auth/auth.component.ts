@@ -55,4 +55,9 @@ export class AuthComponent {
   onSwitchMode() {
     this.isLoginMode = !this.isLoginMode
   }
+
+  onHandleError() {
+    this.error = null;
+  }
+  
 }
